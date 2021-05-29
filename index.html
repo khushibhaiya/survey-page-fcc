@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 100%;
+                display: block;
+                background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHw%3D&w=1000&q=80");
+                background-repeat: no-repeat;
+            background-size: cover;
+            }
+            .title{
+                color: lightgray;
+                font-size: 25px;
+            }
+            .form-control {
+                width: 40%;
+                height: 2.375rem;
+                padding: 0.250rem 0.75rem;
+                margin:  5px auto 25px;
+                color: #495057;
+                background-color: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 0.50rem;
+                -ms-box-sizing:content-box;
+                -moz-box-sizing:content-box;
+                -webkit-box-sizing:content-box; 
+                box-sizing:content-box;
+            }
+            .form-group {
+                margin: 0 auto 1.25rem auto;
+                padding: 0.25rem;
+            }
+            .form {
+                text-align: center;
+                padding: 2.5rem;
+                background: var(--color-darkblue-alpha);
+                padding: 2.5rem 0.625rem;
+                border-radius: 0.25rem;
+            }
+            .form-label {
+                width: 40%;
+                text-align: left;
+                margin: 0 auto;
+            }
+            .radio-button {
+                display: inline-block;
+                margin-right: 0.625rem;
+                min-height: 1.25rem;
+                min-width: 1.25rem;
+            }    
+            .checkbox-button {
+                display: inline-block;
+                margin-right: 0.625rem;
+                min-height: 1.25rem;
+                min-width: 1.25rem;
+            }   
+            .textarea-enter {
+                display: inline-block;
+                min-height: 100px;
+                width: 39%;
+                padding: 0.625rem;
+                resize: vertical;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div style="display: block; margin: 0 auto; width: 100%;">
+            <h1 id="title" style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 45px; color: lightgray ;"><u></u>Survey Form</u></h1>
+            <p id="description" style="text-align:center; font-size: 25px; color: lightgray;">This is a survey form which will help us improve our platform using your reviews.</p>
+            <form id="survey-form" class="form">
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="name-label" for="name" class="title">Name</label>
+                    </div>
+                    <input id="name" type="text" placeholder="Enter Your Name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="email-label" for="email" class="title">Email</label>
+                    </div>
+                    <input id="email" type="email" placeholder="Enter Your Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="number-label" for="Age" class="title">Age</label>
+                    </div>
+                    <input id="number" type="number" placeholder="Enter Your Age" min="15" max="99" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="dropdown" for="options" class="title">What are your preferable Domains?</label>
+                    </div>
+                    <select name="domain" class="form-control">
+                        <option disabled="" selected="" value="">Select Given Domain</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="Machine Learning and Artifical Intelligence">Machine Learning and Artifical Intelligence</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="preferNo">Prefer not to say</option>
+                        <option value="other">Other</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="options" for="suggestions" class="title">Would you like to fill such surveys again sometime?</label>
+                    </div>
+
+                    <div style="margin: 5px auto; width: 40%; text-align: left;">
+                        <input name="user" value="Yes" type="radio" class="radio-button"><label style="font-size: 25px; color: lightgray;">Yes</label>
+                        <br />
+                        <input name="user" value="Maybe" type="radio" class="radio-button"><label style="font-size: 25px; color: lightgray;">Maybe</label>
+                        <br />
+                        <input name="user" value="No" type="radio" class="radio-button"><label style="font-size: 25px; color: lightgray;">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="checkbox" for="suggestions" class="title">What are the other skills that you would like to work on?</label>
+                    </div>
+
+                    <div style="margin: 5px auto; width: 40%; text-align: left;">
+                        <input value="1" type="checkbox" class="checkbox-button"><label style="font-size: 25px; color: lightgrey;">Front-End Development</label>
+                        <br />
+                        <input value="2" type="checkbox" class="checkbox-button"><label style="font-size: 25px; color: lightgrey;">Back-End Development</label>
+                        <br />
+                        <input value="3" type="checkbox" class="checkbox-button"><label style="font-size: 25px; color: lightgrey;">Full-stack Development</label>
+                        <br />
+                        <input value="4" type="checkbox" class="checkbox-button"><label style="font-size: 25px; color: lightgrey;">Open-Source Projects</label>
+                        <br />
+                        <input value="6" type="checkbox" class="checkbox-button"><label style="font-size: 25px; color: lightgrey;">Additional</label>
+                        <br />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label id="textarea" for="feedback" class="title">Any feedbacks or suggestions?</label>    
+                    </div>
+                    <textarea id="text" class="textarea-enter" name="comment" placeholder="Enter your feedback here" ></textarea>
+                <div class="form">
+                <button type="submit" style="padding: 15px; border-radius: 10px; display: inline-block; width: 30%; background-color: rgb(234, 240, 247);">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>
